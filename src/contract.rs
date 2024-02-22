@@ -49,10 +49,7 @@ pub fn execute(
         ExecuteMsg::IncrementBy {amount} => increment_by(deps, amount),
         ExecuteMsg::DecrementBy {amount} => decrement_by(deps, amount), 
         ExecuteMsg::Reset {} => reset(deps, info),
-        ExecuteMsg::SendFunds{address, token} => send_funds(deps, address, token),
-        
-
-        
+        ExecuteMsg::SendFunds{address, token} => send_funds(deps, address, token),        
     }
 }
 
@@ -66,3 +63,4 @@ pub fn query(deps: Deps, _env: Env, msg: QueryMsg) -> StdResult<Binary> {
 
 #[cfg(test)]
 mod tests {}
+ 
